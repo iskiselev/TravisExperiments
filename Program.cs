@@ -17,8 +17,7 @@
             {
                 StartInfo =
                 {
-                    FileName = "TravisExperiments.exe",
-                    Arguments = "blahhhhh"
+                    FileName = "fsc.exe"
                 }
             };
             p.Start();
