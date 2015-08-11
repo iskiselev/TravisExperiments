@@ -1,12 +1,27 @@
 ﻿namespace TravisExperiments
 {
     using System;
+    using System.Diagnostics;
+    using System.Linq;
 
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Microsoft.Win32.Registry.GetValue(@"HKEY_LOCAL_MACHINE\Software\Microsoft\FSharp\3.1\Runtime\v4.0", null, null));
+            if (args.Length > 0 && string.Concat(args).Contains("blahhhhh"))
+            {
+                Console.WriteLine("Hura!");
+            }
+
+            var p = new Process
+            {
+                StartInfo =
+                {
+                    FileName = "TravisExperiments.exe",
+                    Arguments = "blahhhhh"
+                }
+            };
+            p.Start();
         }
     }
 }
