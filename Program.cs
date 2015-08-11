@@ -17,10 +17,13 @@
             {
                 StartInfo =
                 {
-                    FileName = "fsc.exe"
+                    FileName = "fsc.exe",
+                    UseShellExecute = false
                 }
             };
             p.Start();
+            p.WaitForExit();
+            Console.WriteLine(p.ExitCode);
         }
     }
 }
