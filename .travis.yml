@@ -6,5 +6,5 @@ script:
   - xbuild /p:Configuration=Release /v:q TravisExperiments.sln
   - mkdir /tmp/test
   - export MONO_REGISTRY_PATH=/tmp/test
-  - find /tmp/test -name 'values.xml'
   - mono ./bin/TravisExperiments.exe
+  - find /tmp/test -name 'values.xml'
