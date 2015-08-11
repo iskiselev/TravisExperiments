@@ -4,7 +4,7 @@ solution: TravisExperiments.sln
  
 script:
   - xbuild /p:Configuration=Release /v:q TravisExperiments.sln
-  - mkdir /tmp/test/LocalMachine/software/microsoft/fsharp/3.1/runtime/v4.0
+  - mkdir -p /tmp/test/LocalMachine/software/microsoft/fsharp/3.1/runtime/v4.0
   - echo "<values><value name=\"Content Type\" type=\"string\">.\somepath\</value></values>" > /tmp/test/LocalMachine/software/microsoft/fsharp/3.1/runtime/v4.0/values.xml
   - export MONO_REGISTRY_PATH=/tmp/test
   - mono ./bin/TravisExperiments.exe
