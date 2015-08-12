@@ -3,6 +3,9 @@ solution: TravisExperiments.sln
  
  
 script:
+  - pwd
+  - echo "$PWD"
+  - cd
   - nuget install FSharp.Compiler.Tools -Version 4.0.0.1 -OutputDirectory ./bin -ExcludeVersion
   - export PATH=$PATH:./bin/FSharp.Compiler.Tools/tools/
   - mono fsc.exe
