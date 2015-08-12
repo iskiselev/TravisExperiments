@@ -24,7 +24,7 @@
             {
                 StartInfo =
                 {
-                    FileName = "/home/travis/build/iskiselev/TravisExperiments/FSharp.Compiler.Tools/tools/fsc.exe",
+                    FileName = "/home/travis/build/iskiselev/TravisExperimentsbin/bin/FSharp.Compiler.Tools/tools/fsc.exe",
                     //Arguments = "./FSharp.Compiler.Tools/tools/fsc.exe",
                     UseShellExecute = false
                 }
