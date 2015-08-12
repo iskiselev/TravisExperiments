@@ -8,6 +8,13 @@
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("//arguments//");
+            foreach (var s in args)
+            {
+                Console.WriteLine(s);
+            }
+
+            Console.WriteLine("//endarguments//");
             if (args.Length > 0 && string.Concat(args).Contains("blahhhhh"))
             {
                 Console.WriteLine("Hura!");
@@ -17,7 +24,7 @@
             {
                 StartInfo =
                 {
-                    FileName = "./bin/FSharp.Compiler.Tools/tools/fsc.exe",
+                    FileName = "./FSharp.Compiler.Tools/tools/fsc.exe",
                     UseShellExecute = false
                 }
             };
