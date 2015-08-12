@@ -17,7 +17,7 @@
             {
                 StartInfo =
                 {
-                    FileName = "fsc.exe",
+                    FileName = "./bin/FSharp.Compiler.Tools/tools/fsc.exe",
                     //UseShellExecute = false
                 }
             };
