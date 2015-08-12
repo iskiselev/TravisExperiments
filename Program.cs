@@ -18,7 +18,7 @@
                 StartInfo =
                 {
                     FileName = "fsc.exe",
-                    UseShellExecute = false
+                    //UseShellExecute = false
                 }
             };
             p.Start();
