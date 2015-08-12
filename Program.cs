@@ -24,8 +24,8 @@
             {
                 StartInfo =
                 {
-                    FileName = "mono",
-                    Arguments = "./FSharp.Compiler.Tools/tools/fsc.exe",
+                    FileName = "./FSharp.Compiler.Tools/tools/fsc.exe",
+                    //Arguments = "./FSharp.Compiler.Tools/tools/fsc.exe",
                     UseShellExecute = false
                 }
             };
