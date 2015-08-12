@@ -5,6 +5,8 @@ solution: TravisExperiments.sln
 script:
   - nuget install FSharp.Compiler.Tools -Version 4.0.0.1 -OutputDirectory ./bin -ExcludeVersion
   - cp -r ./bin/FSharp.Compiler.Tools/tools ./bin
+  - ls ./bin
+  - mono ./bin/fsc.exe
   - xbuild /p:Configuration=Release /v:q TravisExperiments.sln
   - cd bin
   - mono ./TravisExperiments.exe
