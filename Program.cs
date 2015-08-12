@@ -18,7 +18,7 @@
                 StartInfo =
                 {
                     FileName = "./bin/FSharp.Compiler.Tools/tools/fsc.exe",
-                    //UseShellExecute = false
+                    UseShellExecute = false
                 }
             };
             p.Start();
