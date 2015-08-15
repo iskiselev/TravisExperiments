@@ -4,10 +4,9 @@ solution: TravisExperiments.sln
  
 script:
   - pwd
-  - NODEJS=`nvm which $NODEJS_VERSION`
+  - NODEJS=$(dirname "`nvm which $NODEJS_VERSION`")
   - echo $NODEJS
-  - NODEJS=$(dirname "$NODEJS")
-  - echo $NODEJS
+  - export NODEJS=$NODEJS
   
   - xbuild /p:Configuration=Release /v:q TravisExperiments.sln
   - mono ./TravisExperiments.exe 
