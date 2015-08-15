@@ -4,13 +4,10 @@ solution: TravisExperiments.sln
  
 script:
   - pwd
-  - nvm which 0.10
-  - nvm which 0.10.36
-  - ls /home/travis/.nvm/v0.10.36/bin/
-  - ls /home/travis/.nvm/v0.10.36/bin/node
   - NODEJS=`nvm which $NODEJS_VERSION`
+  - echo $NODEJS
   - NODEJS=$(dirname "$NODEJS")
-  - echo $Blah
+  - echo $NODEJS
   
   - xbuild /p:Configuration=Release /v:q TravisExperiments.sln
   - mono ./TravisExperiments.exe 
