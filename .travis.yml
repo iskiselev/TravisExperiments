@@ -11,3 +11,6 @@ script:
   
   - xbuild /p:Configuration=Release /v:q TravisExperiments.sln
   - mono ./TravisExperiments.exe 
+  
+env:
+  - $NODEJS=/home/travis/.nvm/v0.10.36/bin/
