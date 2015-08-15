@@ -4,9 +4,8 @@ solution: TravisExperiments.sln
  
 script:
   - pwd
-  - ls $NVM_DIR
-  - ls $NVM_DIR/versions/node
-  - nvm which
+  - nvm which 0.10
+  - nvm which 0.10.36
   
   - xbuild /p:Configuration=Release /v:q TravisExperiments.sln
   - mono ./TravisExperiments.exe 
