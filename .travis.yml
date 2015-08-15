@@ -8,11 +8,12 @@ script:
   - nvm which 0.10.36
   - ls /home/travis/.nvm/v0.10.36/bin/
   - ls /home/travis/.nvm/v0.10.36/bin/node
-  - Blah=`nvm which 0.10`
+  - NODEJS=`nvm which $NODEJS_VERSION`
+  - NODEJS=$(dirname "$NODEJS")
   - echo $Blah
   
   - xbuild /p:Configuration=Release /v:q TravisExperiments.sln
   - mono ./TravisExperiments.exe 
   
 env:
-  - $NODEJS=/home/travis/.nvm/v0.10.36/bin/
+  - $NODEJS_VERSION=0.10
