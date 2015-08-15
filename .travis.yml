@@ -6,6 +6,8 @@ script:
   - pwd
   - nvm which 0.10
   - nvm which 0.10.36
+  - ls /home/travis/.nvm/v0.10.36/bin/
+  - ls /home/travis/.nvm/v0.10.36/bin/node
   
   - xbuild /p:Configuration=Release /v:q TravisExperiments.sln
   - mono ./TravisExperiments.exe 
