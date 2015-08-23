@@ -3,12 +3,13 @@ solution: TravisExperiments.sln
  
  
 script:
-  - pwd
-  - export NODEJS=$(dirname `nvm which $NODEJS_VERSION`)
-  - echo $NODEJS
-  
+  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner 
   - xbuild /p:Configuration=Release /v:q TravisExperiments.sln
-  - mono ./TravisExperiments.exe 
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./bin/TravisExperiments.dll
+  - rm bin/nunit.core.dll
+  - rm bin/nunit.core.interfaces.dll
+  - rm bin/nunit.util.dll
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./bin/TravisExperiments.dll
   
 env:
   - $NODEJS_VERSION=0.10
